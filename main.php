@@ -1,7 +1,6 @@
 <?php
- 
   require "connect.php";
-   
+  require "signup.php";
   $result = mysqli_query($connect, "SELECT * FROM `users`");
 
  
@@ -24,7 +23,9 @@
   <div class="container">
     <form name="callback" action="signup.php" method="post" enctype="multipart/form-data">
       <div class="wrapper">
-        <input class="input" type="text" name="full_name" placeholder="Введите ФИО*">
+        <input class="input" type="text" name="full_name" placeholder="Введите ФИО*" 
+        value="<?php echo $_POST['full_name']?>">
+        <?php echo $err['full_name']?>
       </div>
 
       <div class="wrapper">
