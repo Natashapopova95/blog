@@ -1,6 +1,6 @@
 <?php
-
-  
+ require "connect.php";
+  $blog = mysqli_query($connect, "SELECT * FROM `news`");
 ?>
 
 <!DOCTYPE html>
@@ -16,38 +16,21 @@
 <body>
   <div class="containers">
     <h1>Новости</h1>
-    <div class="wrap">
-      <div class="column">
-        <h3 class="title">blog1</h3>
-        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio libero, laboriosam, provident a
-          veniam nostrum error, veritatis officia quidem iusto aliquid recusandae rerum nemo cum culpa impedit harum
-          quas consectetur?</p>
-      </div>
-      <div class="column">
-        <h3 class="title">blog2</h3>
-        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio libero, laboriosam, provident a
-          veniam nostrum error, veritatis officia quidem iusto aliquid recusandae rerum nemo cum culpa impedit harum
-          quas consectetur?</p>
-      </div>
-      <div class="column">
-        <h3 class="title">blog3</h3>
-        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio libero, laboriosam, provident a
-          veniam nostrum error, veritatis officia quidem iusto aliquid recusandae rerum nemo cum culpa impedit harum
-          quas consectetur?</p>
-      </div>
-      <div class="column">
-        <h3 class="title">blog4</h3>
-        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio libero, laboriosam, provident a
-          veniam nostrum error, veritatis officia quidem iusto aliquid recusandae rerum nemo cum culpa impedit harum
-          quas consectetur?</p>
-      </div>
-      <div class="column">
-        <h3 class="title">blog5</h3>
-        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio libero, laboriosam, provident a
-          veniam nostrum error, veritatis officia quidem iusto aliquid recusandae rerum nemo cum culpa impedit harum
-          quas consectetur?</p>
-      </div>
-    </div>
+    <ul>
+      <?php
+        while($new = mysqli_fetch_assoc($blog))
+      {
+       ?>
+      <div class="wrap">
+        <div class="columns">
+          <h3 class="title"><?php echo $new['title']?></h3>
+          <p class="text"><?php echo $new['text']?></p>
+          <p class="text datetime"><?php echo "дата публикации:" . $new['datetime']?></p>
+        </div>
+        <?php
+     }
+      ?>
+    </ul>
   </div>
 </body>
 

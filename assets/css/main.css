@@ -104,18 +104,18 @@ body {
   font-size: 16px;
   line-height: 1.2;
   height: 100%;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../bac.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .wrapper {
   max-width: 500px;
@@ -210,6 +210,7 @@ h1 {
   box-shadow: 5px 5px 5px 0px #a29d9d;
   padding: 21px 8px;
   border-radius: 8px;
+  background-color: #fff;
 }
 .body {
   display: flex;
@@ -217,6 +218,9 @@ h1 {
   max-width: 400px;
   margin: 0 auto;
   margin-bottom: 30px;
+}
+.datetime {
+  text-align: right;
 }
 .inner {
   display: flex;
@@ -229,27 +233,36 @@ h1 {
   font-size: 25px;
   color: #ff2241;
 }
+@media (max-width: 1000px) {
+  .wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .columns {
+    margin-bottom: 41px;
+  }
 
-@media (max-width: 560px) {
-  .wrapper {
-    max-width: 400px;
+  @media (max-width: 560px) {
+    .wrapper {
+      max-width: 400px;
+    }
   }
-}
 
-@media (max-width: 450px) {
-  .wrapper {
-    max-width: 300px;
+  @media (max-width: 450px) {
+    .wrapper {
+      max-width: 300px;
+    }
+    .input {
+      padding: 15px;
+    }
+    .btn {
+      padding: 16px 0;
+    }
   }
-  .input {
-    padding: 15px;
-  }
-  .btn {
-    padding: 16px 0;
-  }
-}
 
-@media (max-width: 350px) {
-  .wrapper {
-    max-width: 240px;
+  @media (max-width: 350px) {
+    .wrapper {
+      max-width: 240px;
+    }
   }
 }
