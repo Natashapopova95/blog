@@ -1,12 +1,18 @@
 <?php
- 
   require_once 'connect.php';
-  
 
-  $full_name = htmlspecialchars(trim($_POST['full_name']));
-  $address = htmlspecialchars(trim($_POST['address']));
-  $tel = htmlspecialchars(trim($_POST['tel']));
-  $email = htmlspecialchars(trim($_POST['email']));
+  function clear_data($var) {
+    $var = trim($var);
+    $var = stripslashes($var);
+    $var = strip_tags($var);
+    $var = htmlspecialchars($var);
+    return $var;
+  }
+
+  $full_name = clear_data($_POST['full_name']);
+  $address = clear_data($_POST['address']);
+  $tel = clear_data($_POST['tel']);
+  $email = clear_data($_POST['email']);
   
 
  $sql = mysqli_query($connect, "INSERT INTO `users`(`id_user`,`full_name`, `address`, `tel`, `email`) VALUES (NULL, '$full_name','$address','$tel','$email')");
