@@ -1,8 +1,7 @@
 <?php
+ 
   require "connect.php";
-  require "signup.php";
-  $result = mysqli_query($connect, "SELECT * FROM `users`");
-
+   $result = mysqli_query($connect, "SELECT * FROM `users`");
  
 ?>
 
@@ -16,16 +15,16 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <script src="jquery.main.js"></script>
   <script src="validate.min.js"></script>
+
 </head>
 
 <body>
-  <h1>Обратная связь</h1>
-  <div class="container">
-    <form name="callback" action="signup.php" method="post" enctype="multipart/form-data">
+  <div class="form">
+    <h1>Обратная связь</h1>
+
+    <form name="callback" method="post" action="signup.php">
       <div class="wrapper">
-        <input class="input" type="text" name="full_name" placeholder="Введите ФИО*" 
-        value="<?php echo $_POST['full_name']?>">
-        <?php echo $err['full_name']?>
+        <input class="input" type="text" name="full_name" placeholder="Введите ФИО*">
       </div>
 
       <div class="wrapper">
@@ -40,31 +39,34 @@
         <input required class="input" type="email" name="email" placeholder="Введите email*">
       </div>
 
+      <button class="btn wrapper" type="submit">Отправить</button>
+    </form>
+  </div>
+  <div class="color">
+    <h4 class="subtitle">Введённые данные</h4>
+    <?php
 
-      <input class="btn wrapper" type="submit" value="Отправить" />
-
-
-      <?php
         while($user = mysqli_fetch_assoc($result))
       {
        ?>
-      <div class="box">
+    <div class="box">
+      <div class="container">
         <div class="list"><?php echo "ФИО:" . $user['full_name']?></div>
         <div class="list"><?php echo "Адрес:" . $user['address']?></div>
         <div class="list"><?php echo "Телефон:" . $user['tel']?></div>
         <div class="list"><?php echo "email:" .  $user['email']?></div>
       </div>
-      <?php
+    </div>
+    <?php
      }
+
       ?>
+    <div>
 
 
 
 
-  </div>
-  </form>
-
-  <script src="main.js"></script>
+      <script src="main.js"></script>
 </body>
 
 </html>

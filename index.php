@@ -17,26 +17,28 @@
 </head>
 
 <body>
-  <div class="containers">
-    <h1>Главная страница</h1>
-    <ul>
-      <?php
+  <div class="color">
+    <div class="containers">
+      <h1>Главная страница</h1>
+      <ul>
+        <?php
         while($new = mysqli_fetch_assoc($blog))
       {
        ?>
-      <div class="wrap">
-        <div class="columns">
-          <h3 class="title"><?php echo $new['title']?></h3>
-          <p class="text"><?php echo $new['text']?></p>
-          <p class="text datetime"><?php echo"дата публикации:" . $new['datetime']?></p>
-        </div>
-        <?php
+        <div class="wrap">
+          <div class="columns">
+            <h3 class="title"><?php echo $new['title']?></h3>
+            <p class="text"><?php echo $new['text']?></p>
+            <p class="text datetime"><?php echo"дата публикации:" . $new['datetime']?></p>
+          </div>
+          <?php
      }
       ?>
-    </ul>
-    <div class="inner">
-      <a class="link" href="blog.php">Все новости</a>
-      <a class="link" href="main.php">Обратная связь</a>
+      </ul>
+      <div class="inner">
+        <a class="link" href="blog.php">Все новости</a>
+        <a class="link" href="main.php">Обратная связь</a>
+      </div>
     </div>
   </div>
 </body>
