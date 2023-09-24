@@ -36,6 +36,7 @@ body {
   font-size: 100%;
   line-height: 1;
   font-size: 14px;
+  
 }
 
 input,
@@ -102,32 +103,29 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  line-height: 1.2;
-  background: linear-gradient(
-    90deg,
-    rgba(157, 150, 162, 1) 0%,
-    rgb(65 65 65) 50%,
-    rgb(131 114 114) 100%
-  );
+  line-height: 1.2; 
+   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../bac.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  
 }
 .error {
   color: #ff2241;
   margin-bottom: 6px;
 }
 .container {
-  padding: 0 30px;
+    padding: 0 30px;
 }
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../bac.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 100%;
   padding-bottom: 70px;
+      
 }
 .wrapper {
   max-width: 500px;
@@ -149,6 +147,7 @@ body {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   outline: none;
+  
 }
 .input:focus {
   border: #ff2241 1px solid;
@@ -174,9 +173,9 @@ body {
 }
 .containers {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  margin-top: 40px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 40px;
 }
 .wrap {
   display: flex;
@@ -184,18 +183,18 @@ body {
   row-gap: 40px;
 }
 .column {
-  border: 1px solid #b1aeae;
-  box-shadow: 5px 5px 5px 0px #a29d9d;
-  padding: 21px 30px;
-  width: 368px;
-  border-radius: 8px;
+    border: 1px solid #b1aeae;
+    box-shadow: 5px 5px 5px 0px #a29d9d;
+    padding: 21px 30px;
+    width: 368px;
+    border-radius: 8px;
 }
-h1 {
-  margin-bottom: 70px;
-  text-align: center;
-  font-size: 60px;
-  color: #ff2241;
-}
+ h1 {
+    margin-bottom: 70px;
+    text-align: center;
+    font-size: 60px;
+    color: #ff2241;
+    }
 .title {
   color: #ff2241;
   margin-bottom: 30px;
@@ -221,46 +220,49 @@ h1 {
   margin-bottom: 50px;
 }
 .subtitle {
-  font-size: 42px;
-  color: #ff2241;
-  margin-bottom: 24px;
-  text-align: center;
+    font-size: 42px;
+    color: #ff2241;
+    margin-bottom: 24px;
+    text-align: center;
 }
 .color {
+
   padding: 30px 0;
 }
 .list {
-  margin-bottom: 12px;
-  color: #ffff;
+    margin-bottom: 12px;
+    color: #ffff;
 }
 .columns {
-  border: 1px solid #b1aeae;
-  box-shadow: 5px 5px 5px 0px #a29d9d;
-  padding: 21px 30px;
-  border-radius: 8px;
-  background-color: #fff;
+    border: 1px solid #b1aeae;
+    box-shadow: 5px 5px 5px 0px #a29d9d;
+    padding: 21px 30px;
+    border-radius: 8px;
+    background-color: #fff;
 }
 .body {
-  display: flex;
-  justify-content: center;
-  max-width: 400px;
-  margin: 0 auto;
-  margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
+   margin-bottom: 30px;
 }
 .datetime {
   text-align: right;
   color: #ff2241;
 }
 .inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 30px;
-  margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+    margin-top: 60px;
+     padding-bottom: 30px;
 }
 .link {
   font-size: 25px;
   color: #ff2241;
+
 }
 @media (max-width: 1000px) {
   .wrap {
@@ -269,40 +271,63 @@ h1 {
   }
   .columns {
     margin-bottom: 41px;
-  }
+}
 
-  @media (max-width: 560px) {
-    .wrapper {
-      max-width: 400px;
-    }
-    .box {
-      padding: 10px 10px;
-      max-width: 386px;
-      margin-bottom: 30px;
-    }
-  }
 
-  @media (max-width: 450px) {
-    .wrapper {
-      max-width: 300px;
-    }
-    .input {
-      padding: 15px;
-    }
-    .btn {
-      padding: 16px 0;
-    }
-    .box {
-      max-width: 300px;
-    }
+@media (max-width: 560px) {
+  .wrapper {
+    max-width: 400px;
   }
+  .box {
+    padding: 10px 10px;
+    max-width: 386px;
+    margin-bottom: 30px;
+  }
+  
+}
 
-  @media (max-width: 350px) {
-    .wrapper {
-      max-width: 240px;
-    }
-    .box {
-      max-width: 240px;
-    }
+@media (max-width: 450px) {
+  .wrapper {
+    max-width: 300px;
   }
+  .input {
+    padding: 15px;
+  }
+  .btn {
+    padding: 16px 0;
+  }
+  .box {
+    max-width: 300px;
+  }
+ 
+}
+@media (max-height: 430px) {
+ 
+  .color {
+    margin-top: 323px;
+  }
+}
+@media (max-height: 400px) {
+  .form {
+    height: 150%;
+  }
+  .color {
+    margin-top: 170px;
+  }
+  .link {
+    font-size: 19px;
+  }
+  .inner {
+    margin-top: 33px;
+  }
+}
+
+@media (max-width: 350px) {
+  .wrapper {
+    max-width: 240px;
+  }
+  .box {
+    max-width: 240px;
+  }
+}
 }

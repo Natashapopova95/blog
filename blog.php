@@ -14,23 +14,23 @@
 </head>
 
 <body>
-  <div class="containers">
-    <h1>Новости</h1>
-    <ul>
-      <?php
+  <div class = "containers">
+ <h1>Новости</h1>
+  <ul>
+    <?php
         while($new = mysqli_fetch_assoc($blog))
       {
        ?>
-      <div class="wrap">
-        <div class="columns">
-          <h3 class="title"><?php echo $new['title']?></h3>
-          <p class="text"><?php echo $new['text']?></p>
-          <p class="text datetime"><?php echo "дата публикации:" . $new['datetime']?></p>
-        </div>
-        <?php
+       <div class="wrap">
+      <div class="columns">
+        <h3 class="title"><?php echo $new['title']?></h3>
+        <p class="text"><?php echo $new['text']?></p>
+        <p class="text datetime"><?php echo "дата публикации:" . $new['datetime']?></p>
+      </div>
+    <?php
      }
       ?>
-    </ul>
+  </ul>
   </div>
 </body>
 
